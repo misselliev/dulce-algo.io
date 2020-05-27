@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/HTML exercises/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <section id="posts">
+    <div id="post1" class="post">
+      <h1>Title</h1>
+      <span>Date</span>
+      <div>Content</div>
+    </div>
+    <div id="post2" class="post">
+      <h1>Title</h1>
+      <span>Date</span>
+      <div>Content</div>
+    </div>
+    <div id="post3" class="post">
+      <h1>Title</h1>
+      <span>Date</span>
+      <div>Content</div>
+    </div>
+  </section>
+  <script>
+    let posts= Array.from(document.getElementsByClassName('post'));
+    for(let i=0; i<posts.length; i++){
+      let button= document.createElement('button');
+      button.innerHTML = 'Edit';
+      posts[i].appendChild(button);
+      button.addEventListener('click', function(){
+        let question= prompt('Write a new title');
+        posts[i].getElementsByTagName('h1')[0].innerHTML = question;
+      })
+    }
+  </script>
+</body>
+</html>
