@@ -14,10 +14,3 @@ var missingNumber = function(nums) {
     }
     return (1+nums.length) * nums.length / 2 - sum;
 };
-
-// In ruby
-
-def missing_number(nums)
-    total = ((nums.length+1)*(nums.length))/2
-    return total - nums.inject(0, :+)
-end
