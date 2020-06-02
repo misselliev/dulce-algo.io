@@ -4,6 +4,10 @@
 
 //  SIZE: Returns the number of nodes in the linked list.
 
+// GET FIRST: Returns the first node of the linked list.
+
+// GET LAST: Returns the last node of the linked list
+
 const Node = require('./node');
 
 class LinkedList{
@@ -24,5 +28,20 @@ class LinkedList{
       node = node.next;
     }
     return counter;
+  }
+
+  getFirst(){
+    return this.head;
+  }
+
+  getLast(){
+    if(!this.head) return null;
+    let node = this.head;
+
+    while(node){
+      if(!node.next) return node;
+      node = node.next;
+    }
+
   }
 }
