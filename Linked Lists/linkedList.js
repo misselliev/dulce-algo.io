@@ -8,6 +8,8 @@
 
 // GET LAST: Returns the last node of the linked list
 
+// CLEAR: Delete all nodes in the list
+
 const Node = require('./node');
 
 class LinkedList{
@@ -42,6 +44,9 @@ class LinkedList{
       if(!node.next) return node;
       node = node.next;
     }
+  }
 
+  clear(){
+    this.head= null;
   }
 }
